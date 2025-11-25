@@ -11,8 +11,7 @@ Instrucciones de compilado:
 1.Clonar el repositorio
 
 2.Instalar dependencias:
-npm install
-# o yarn install
+npm install (o yarn install)
 
 3.Ejecutar en Modo Desarrollo:
 npm run dev
