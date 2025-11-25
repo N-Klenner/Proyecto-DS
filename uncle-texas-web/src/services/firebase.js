@@ -5,7 +5,7 @@ import { getFirestore } from "firebase/firestore";
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD6Po0jxTFT_T34aMJBIYrAIWvwFTWnj6g",
+  apiKey: "xxx",
   authDomain: "uncle-texas-web.firebaseapp.com",
   projectId: "uncle-texas-web",
   storageBucket: "uncle-texas-web.firebasestorage.app",
@@ -20,3 +20,4 @@ const googleProvider = new GoogleAuthProvider();
 const db = getFirestore(app);
 
 export { app, auth, googleProvider, db };
+
