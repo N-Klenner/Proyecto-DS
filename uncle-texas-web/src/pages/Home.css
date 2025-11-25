@@ -1,0 +1,146 @@
+.home {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #111;
+  color: #f5f5f5;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* HERO CON CARRUSEL */
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  overflow: hidden;
+}
+
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 70vh;      /* mismo alto para que el centro sea correcto */
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+/* Botones izquierda / derecha */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f5f5f5;
+  font-size: 2rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 3;           
+}
+
+.carousel-btn.prev {
+  left: 20px;
+}
+
+.carousel-btn.next {
+  right: 20px;
+}
+
+/* Puntos inferiores */
+.carousel-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 1px solid #f5d08a;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.dot-active {
+  background-color: #f5d08a;
+}
+
+/* Texto sobre el carrusel */
+.hero-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 1.5rem;
+  pointer-events: none;    /* 👈 no bloquea los clics */
+  z-index: 2;              /* debajo de los botones, encima de la imagen */
+}
+
+.hero-text h1 {
+  font-size: clamp(2.8rem, 5vw, 4rem);
+  margin: 0;
+  letter-spacing: 4px;
+}
+
+/* Título de las otras imágenes */
+.hero-title-small {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  margin: 0;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.hero-sub {
+  margin-top: 0.8rem;
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+/* CTA debajo */
+.cta-section {
+  text-align: center;
+  padding: 3rem 1.5rem 4rem;
+}
+
+.cta-button {
+  background-color: #f5d08a;
+  padding: 0.9rem 2.6rem;
+  border-radius: 999px;
+  color: #111;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.05rem;
+  border: none;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  filter: brightness(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .carousel {
+    height: 60vh;
+  }
+
+  .hero-text {
+    padding: 0 1rem;
+  }
+}
